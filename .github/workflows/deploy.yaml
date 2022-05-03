@@ -11,6 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - run: python revmove_invalid_links.py
+
       - name: Build Link Index
         uses: jackyzha0/hugo-obsidian@v2.12
         with:
@@ -34,4 +36,4 @@ jobs:
           github_token: ${{ secrets.QUARTZ_NOTES_TOKEN }}
           publish_dir: ./public
           publish_branch: master  # deploying branch
-          cname: noodle.yenly.org
+          cname: https://omegakid1902.github.io/quartz_notes
