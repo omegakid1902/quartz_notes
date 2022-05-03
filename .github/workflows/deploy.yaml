@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: python revmove_invalid_links.py
+      - run: python3 revmove_invalid_links.py
 
       - name: Build Link Index
         uses: jackyzha0/hugo-obsidian@v2.12
